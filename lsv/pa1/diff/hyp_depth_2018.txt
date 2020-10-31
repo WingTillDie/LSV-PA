@@ -1,5 +1,0 @@
---- lsv/pa1/ref/hyp_depth_2018.txt	2020-10-31 10:19:04.741336222 +0800
-+++ lsv/pa1/out/hyp_depth_2018.txt	2020-10-31 10:19:04.801337449 +0800
-@@ -0,0 +1,2 @@
-+ABC command line: "read benchmarks/best_results/depth/hyp_depth_2018.blif; lsv_print_sopunate".
-+
