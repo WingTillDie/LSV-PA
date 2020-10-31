@@ -1,2 +1,0 @@
-ABC command line: "read benchmarks/best_results/depth/ctrl_depth_2017.blif; lsv_print_sopunate".
-
