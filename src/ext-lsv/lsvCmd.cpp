@@ -11,12 +11,12 @@ void init(Abc_Frame_t* pAbc) {
 void destroy(Abc_Frame_t* pAbc) {}
 
 Abc_FrameInitializer_t frame_initializer = {init, destroy};
-//extern Abc_FrameInitializer_t Lsv_FrameInitPrintSopunate;
+extern Abc_FrameInitializer_t Lsv_FrameInitPrintSopunate;
 
 struct PackageRegistrationManager {
   PackageRegistrationManager() {
     Abc_FrameAddInitializer(&frame_initializer);
-    //Abc_FrameAddInitializer(&Lsv_FrameInitPrintSopunate);
+    Abc_FrameAddInitializer(&Lsv_FrameInitPrintSopunate);
   }
 } lsvPackageRegistrationManager;
 

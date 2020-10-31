@@ -172,10 +172,10 @@ node [87]:
 +unate inputs: [41],[86]
 -unate inputs: pi139,pi143,pi184
 node [103]:
-+unate inputs: [25],[102],[101]
++unate inputs: [25],[101],[102]
 -unate inputs: pi212,pi221,pi222
 node [197]:
-+unate inputs: [10],[193],[79],[105],[194],[196]
++unate inputs: [10],[79],[105],[194],[196],[193]
 node [7]:
 +unate inputs: [3]
 -unate inputs: [6]
@@ -194,7 +194,7 @@ node [83]:
 +unate inputs: [78]
 -unate inputs: pi003
 node [90]:
-+unate inputs: [48],[50],[57],[88],[89],[87]
++unate inputs: [50],[57],[48],[87],[88],[89]
 node [116]:
 +unate inputs: pi009,pi137,[79]
 -unate inputs: pi136,[78]
@@ -215,36 +215,36 @@ node [84]:
 -unate inputs: pi001,pi002
 node [31]:
 -unate inputs: pi087
-binate inputs: pi086,pi214,[29]
+biunate inputs: pi086,pi214,[29]
 node [9]:
 +unate inputs: pi241,[8]
 -unate inputs: pi114,pi115
 node [58]:
-+unate inputs: [49],[56]
--unate inputs: pi025,pi026,[48],[57]
++unate inputs: [56],[49]
+-unate inputs: pi025,pi026,[57],[48]
 node [91]:
-+unate inputs: [40],[45],[82],[90]
++unate inputs: [45],[40],[90],[82]
 -unate inputs: [84]
 node [32]:
 +unate inputs: pi088,pi089
 -unate inputs: pi215,pi216,pi217,[31]
 node [17]:
-+unate inputs: [1],[8],[9]
++unate inputs: [8],[9],[1]
 -unate inputs: [2],[16],[15]
 node [59]:
 +unate inputs: pi153,pi154,[58]
 -unate inputs: pi026,pi027
 node [92]:
-+unate inputs: [47],[81],[91]
++unate inputs: [47],[91],[81]
 -unate inputs: pi146,pi147,[56]
 node [19]:
 -unate inputs: pi248
-binate inputs: pi120,pi247,[17]
+biunate inputs: pi120,pi247,[17]
 node [33]:
 +unate inputs: pi090,pi091,[32]
 -unate inputs: pi218,pi219,pi220
 node [61]:
-+unate inputs: pi155,pi156,[60],[59]
++unate inputs: pi155,pi156,[59],[60]
 node [93]:
 +unate inputs: pi060,[39],[92]
 -unate inputs: pi187,pi188,pi189
@@ -255,7 +255,7 @@ node [34]:
 +unate inputs: pi220
 -unate inputs: pi092,pi093,[33]
 node [109]:
-+unate inputs: [108],[19]
++unate inputs: [19],[108]
 -unate inputs: pi249
 node [62]:
 +unate inputs: pi166,[61]
@@ -270,7 +270,7 @@ node [35]:
 +unate inputs: pi094,pi095
 -unate inputs: pi221,pi222,pi223,[34]
 node [198]:
-+unate inputs: [103],[197],[15],[109],[94]
++unate inputs: [15],[94],[103],[109],[197]
 node [63]:
 +unate inputs: pi167,[62]
 -unate inputs: pi040,pi041,pi043,[41]
@@ -282,10 +282,10 @@ node [22]:
 -unate inputs: pi252,pi253
 node [37]:
 +unate inputs: pi224,pi225
--unate inputs: pi096,[36],[35]
+-unate inputs: pi096,[35],[36]
 node [65]:
 -unate inputs: pi044
-binate inputs: pi042,pi170,pi171,[63]
+biunate inputs: pi042,pi170,pi171,[63]
 node [23]:
 +unate inputs: pi254,pi255
 -unate inputs: pi000,pi126,pi127,[22]
@@ -296,7 +296,7 @@ node [67]:
 +unate inputs: pi047,pi048,[40]
 -unate inputs: pi174,pi175,[66]
 node [69]:
-+unate inputs: pi051,pi052,[68],[67]
++unate inputs: pi051,pi052,[67],[68]
 -unate inputs: pi179,pi180
 node [70]:
 +unate inputs: pi181
@@ -329,7 +329,7 @@ node [107]:
 +unate inputs: [11],[9],[37]
 -unate inputs: [103],[106]
 node [110]:
-+unate inputs: pi252,pi253,[23],[107]
++unate inputs: pi252,pi253,[107],[23]
 -unate inputs: [109]
 node po000:
 +unate inputs: pi128
@@ -346,13 +346,13 @@ node [113]:
 -unate inputs: pi001,pi002,[112]
 node [119]:
 +unate inputs: [52]
-binate inputs: [83],[81],[113]
+biunate inputs: [83],[81],[113]
 node po010:
 +unate inputs: pi138
-binate inputs: pi010,[80],[83],[113]
+biunate inputs: pi010,[83],[80],[113]
 node [118]:
 -unate inputs: pi011
-binate inputs: pi010,pi138,[80],[83],[113]
+biunate inputs: pi010,pi138,[83],[80],[113]
 node po002:
 +unate inputs: pi130
 -unate inputs: [113]
@@ -417,13 +417,13 @@ node [122]:
 -unate inputs: pi017
 node po021:
 +unate inputs: pi149
-binate inputs: pi020,pi021,pi148,[55],[122]
+biunate inputs: pi020,pi021,pi148,[55],[122]
 node po022:
 +unate inputs: pi150
-binate inputs: pi022,pi149,[55],[56],[122]
+biunate inputs: pi022,pi149,[55],[56],[122]
 node [124]:
 +unate inputs: [57]
-binate inputs: pi146,pi147,[56],[122]
+biunate inputs: pi146,pi147,[56],[122]
 node po019:
 +unate inputs: pi019,pi147
 -unate inputs: pi146,[122]
@@ -464,10 +464,10 @@ node [129]:
 -unate inputs: pi156,[128]
 node po030:
 +unate inputs: pi158
-binate inputs: pi029,pi030,pi157,[129]
+biunate inputs: pi029,pi030,pi157,[129]
 node [131]:
 -unate inputs: pi031
-binate inputs: pi029,pi030,pi157,pi158,[129]
+biunate inputs: pi029,pi030,pi157,pi158,[129]
 node po029:
 +unate inputs: pi029,pi157,[129]
 node po031:
@@ -481,11 +481,11 @@ node [132]:
 -unate inputs: pi032,pi033
 node po035:
 +unate inputs: pi163
-binate inputs: pi034,pi035,pi161,pi162,[132]
+biunate inputs: pi034,pi035,pi161,pi162,[132]
 node [134]:
 +unate inputs: [42]
 -unate inputs: pi163
-binate inputs: pi034,pi035,[132]
+biunate inputs: pi034,pi035,[132]
 node po033:
 +unate inputs: pi161
 -unate inputs: [132]
@@ -526,13 +526,13 @@ node po042:
 -unate inputs: pi168,pi169,[137]
 node [139]:
 +unate inputs: [63]
-binate inputs: pi041,pi042,pi170,[138],[137]
+biunate inputs: pi041,pi042,pi170,[137],[138]
 node po044:
 +unate inputs: pi172
-binate inputs: pi044,pi171,[139]
+biunate inputs: pi044,pi171,[139]
 node [141]:
 -unate inputs: pi045
-binate inputs: pi044,pi171,pi172,[139]
+biunate inputs: pi044,pi171,pi172,[139]
 node po043:
 +unate inputs: pi171
 -unate inputs: [139]
@@ -544,10 +544,10 @@ node [142]:
 -unate inputs: pi046
 node po047:
 +unate inputs: pi175
-binate inputs: pi047,pi174,[142]
+biunate inputs: pi047,pi174,[142]
 node [144]:
 -unate inputs: pi047,pi048
-binate inputs: pi174,[142]
+biunate inputs: pi174,[142]
 node po046:
 +unate inputs: pi174
 -unate inputs: [142]
@@ -580,10 +580,10 @@ node [149]:
 -unate inputs: pi052,[92]
 node po058:
 +unate inputs: pi186
-binate inputs: pi057,pi058,pi184,pi185,[149]
+biunate inputs: pi057,pi058,pi184,pi185,[149]
 node [151]:
 +unate inputs: [72]
-binate inputs: pi184,pi185,[149]
+biunate inputs: pi184,pi185,[149]
 node po053:
 +unate inputs: pi181
 -unate inputs: [147]
@@ -632,7 +632,7 @@ node po065:
 +unate inputs: pi065,pi193
 -unate inputs: pi192,[154]
 node [156]:
-+unate inputs: pi190,pi191,pi192,[155],[154]
++unate inputs: pi190,pi191,pi192,[154],[155]
 -unate inputs: pi063
 node po066:
 +unate inputs: pi066,pi194
@@ -705,10 +705,10 @@ node [165]:
 -unate inputs: pi080,pi081,[164]
 node po083:
 +unate inputs: pi211
-binate inputs: pi209,pi210,[28],[165]
+biunate inputs: pi209,pi210,[28],[165]
 node [167]:
 -unate inputs: pi084
-binate inputs: pi209,pi210,pi211,[28],[165]
+biunate inputs: pi209,pi210,pi211,[28],[165]
 node po081:
 +unate inputs: pi209
 -unate inputs: [165]
@@ -723,16 +723,16 @@ node [168]:
 -unate inputs: pi085
 node [172]:
 -unate inputs: pi090,[32]
-binate inputs: pi089,[100],[106],[168]
+biunate inputs: pi089,[100],[106],[168]
 node po087:
 +unate inputs: pi215
-binate inputs: pi214,[31],[106],[168]
+biunate inputs: pi214,[31],[106],[168]
 node [171]:
 -unate inputs: pi088
-binate inputs: pi214,pi215,[31],[106],[168]
+biunate inputs: pi214,pi215,[31],[106],[168]
 node po086:
 +unate inputs: pi214
-binate inputs: pi086,[29],[106],[168]
+biunate inputs: pi086,[29],[106],[168]
 node po085:
 +unate inputs: pi213
 -unate inputs: [168]
@@ -756,22 +756,22 @@ node po089:
 -unate inputs: pi216,[171]
 node po095:
 +unate inputs: pi223
-binate inputs: pi094,pi095,pi221,pi222,[173]
+biunate inputs: pi094,pi095,pi221,pi222,[173]
 node po094:
 +unate inputs: pi222
-binate inputs: pi094,pi221,[173]
+biunate inputs: pi094,pi221,[173]
 node [175]:
 -unate inputs: pi095
-binate inputs: pi094,pi221,pi222,[173]
+biunate inputs: pi094,pi221,pi222,[173]
 node po093:
 +unate inputs: pi221
 -unate inputs: [173]
 node po096:
 +unate inputs: pi224
-binate inputs: pi096,pi223,[175]
+biunate inputs: pi096,pi223,[175]
 node [177]:
 -unate inputs: pi097
-binate inputs: pi096,pi223,pi224,[175]
+biunate inputs: pi096,pi223,pi224,[175]
 node po097:
 +unate inputs: pi225
 -unate inputs: [177]
@@ -853,7 +853,7 @@ node [186]:
 +unate inputs: pi241,[9]
 -unate inputs: [185]
 node po128:
--unate inputs: [198],[97],[112],[138],[185]
+-unate inputs: [97],[112],[138],[185],[198]
 node po115:
 +unate inputs: pi115,pi243
 -unate inputs: pi242,[186]
@@ -881,7 +881,7 @@ node [189]:
 node po120:
 +unate inputs: pi248
 -unate inputs: [189]
-binate inputs: pi120,pi247,[17]
+biunate inputs: pi120,pi247,[17]
 node po121:
 +unate inputs: pi121,pi249,[19]
 -unate inputs: [189]
