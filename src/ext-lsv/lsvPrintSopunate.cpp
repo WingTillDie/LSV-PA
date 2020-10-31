@@ -2,8 +2,6 @@
 #include "base/main/main.h"
 #include "base/main/mainInt.h"
 
-#include <algorithm>
-
 static int Lsv_CommandPrintSopunate(Abc_Frame_t* pAbc, int argc, char** argv);
 
 void Lsv_InitPrintSopunate(Abc_Frame_t* pAbc) {
@@ -19,10 +17,6 @@ struct Fanins_t{
   unsigned int FaninId;
 };
 
-bool cmp(const Fanins_t &a, const Fanins_t &b){
-  return a.FaninId <= b.FaninId;
-}
-
 int comp(const void *a, const void *b){
   return ((Fanins_t*)a)->FaninId > ((Fanins_t*)b)->FaninId;
 }
@@ -32,24 +26,21 @@ void Lsv_NtkPrintSopunate(Abc_Ntk_t* pNtk) {
   Abc_Obj_t* pObj;
   int i;
   Abc_NtkForEachNode(pNtk, pObj, i) {
-    //printf("Object Id = %d, name = %s\n", Abc_ObjId(pObj), Abc_ObjName(pObj));
-    /*
-    if (Abc_NtkHasSop(pNtk)) {
-      printf("The SOP of this node:\n%s", (char*)pObj->pData);
-    }
-    */
     char* pSop = (char*)Abc_ObjData(pObj);
     int nFanins = Abc_SopGetVarNum(pSop);
 
+    // Some testcase will have nodes not present in BLIF with nFanins = 0 print at end of the output, but don't know what does these node represents
+    // Skip such nodes
     if(nFanins == 0) continue;
-
+    // Not printing this line when nFanins == 0
     printf("node %s:\n", Abc_ObjName(pObj));
 
-    char Values[nFanins+1];
+    // Initialize array that stores unateness of fanins
+    char Values[nFanins];
     for(int i=0; i<nFanins; ++i)
       Values[i] = '-';
-    Values[nFanins] = '\0';
 
+    // Calculate unateness by reduction over cubes
     char* pCube;
     Abc_SopForEachCube( pSop, nFanins, pCube ){
       int i;
@@ -61,31 +52,28 @@ void Lsv_NtkPrintSopunate(Abc_Ntk_t* pNtk) {
           Values[i] = 'b'; // Binate
     }
     
+    // Flip unateness if Sop if offset
     if(Abc_SopGetPhase(pSop) == 0)
       for(int i=0; i<nFanins; ++i)
         if(Values[i]=='0' || Values[i] =='1')
           Values[i] = !(Values[i]-'0') +'0';
 
-
-
     //[Abc_ObjFaninNum(pObj)];
-    Fanins_t Fanins[nFanins]; // TODO is it correct that all fanin of node is same as all fanins of cube?
+    // Array that Fanins[j].i maps sop fanin number j to node FaninId i
+    Fanins_t Fanins[nFanins]; // Is it correct that all fanin of node is same as all fanins of cube?
 
     Abc_Obj_t* pFanin;
     int j;
-    Abc_ObjForEachFanin(pObj, pFanin, j) {
+    Abc_ObjForEachFanin(pObj, pFanin, j)
       Fanins[j] = {j, Abc_ObjId(pFanin)};
-      //printf("  Fanin-%d: Id = %d, name = %s\n", j, Abc_ObjId(pFanin), Abc_ObjName(pFanin));
-    }
 
-    //std::sort(Fanins, Fanins+nFanins, cmp);
     qsort(Fanins, nFanins, sizeof(*Fanins), comp);
     
+    // Printing unateness by traverse by FaninId nondecreasing
     bool first = true;
     for(int j=0; j<nFanins; ++j){
       int i = Fanins[j].i;
       if(Values[i] == '1' || Values[i] == '-'){
-        //printf("%d,", i);
         if(first){
           printf("+unate inputs: ");
           first = false;
@@ -126,7 +114,6 @@ void Lsv_NtkPrintSopunate(Abc_Ntk_t* pNtk) {
     }
     if(!first)
       printf("\n");
-    // Traverse by ObjId
   }
 }
 
@@ -151,7 +138,6 @@ int Lsv_CommandPrintSopunate(Abc_Frame_t* pAbc, int argc, char** argv) {
 
 usage:
   Abc_Print(-2, "usage: lsv_print_sopunate [-h]\n");
-  //Abc_Print(-2, "\t        prints the nodes in the network\n");
   Abc_Print(-2, "\t        prints sopunate for each node in the network\n");
   Abc_Print(-2, "\t-h    : print the command usage\n");
   return 1;
